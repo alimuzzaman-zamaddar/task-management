@@ -47,6 +47,7 @@ const AddTask = () => {
               type="text"
               placeholder="Title"
               name="title"
+              required
               className="input input-bordered"
             />
           </div>
@@ -58,6 +59,7 @@ const AddTask = () => {
               type="text"
               placeholder="description"
               name='description'
+              required
               className="input input-bordered"
             />
           </div>
@@ -68,6 +70,7 @@ const AddTask = () => {
             <input
               type="text"
               name='status'
+              required
               defaultValue={"incomplete"}
               className="input input-bordered"
             />
