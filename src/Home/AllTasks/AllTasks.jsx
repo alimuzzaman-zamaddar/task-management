@@ -40,7 +40,7 @@ const AllTasks = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/tasks/${task._id}`, {
+        fetch(`https://task-management-server-liard.vercel.app/${task._id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -48,7 +48,6 @@ const AllTasks = () => {
             if (data.deletedCount > 0) {
                 const remaining = tasks.filter(task2 => task2._id !==task._id)
               setTasks(remaining)
-
               Swal.fire("Deleted!",
                "The Task has been deleted.",
                 "success");
