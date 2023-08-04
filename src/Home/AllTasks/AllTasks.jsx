@@ -40,7 +40,7 @@ const AllTasks = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://task-management-server-liard.vercel.app/${task._id}`, {
+        fetch(`https://task-management-server-liard.vercel.app/tasks/${task._id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
