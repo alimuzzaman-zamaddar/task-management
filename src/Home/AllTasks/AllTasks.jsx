@@ -46,7 +46,7 @@ const AllTasks = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
-                const remaining = tasks.filter(task2 => task2._id !==task._id)
+                const remaining = tasks.filter(task2 => task2._id !==task2._id)
               setTasks(remaining)
               Swal.fire("Deleted!",
                "The Task has been deleted.",
